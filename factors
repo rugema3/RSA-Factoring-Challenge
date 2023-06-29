@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import sys
 import time
 
@@ -48,7 +49,8 @@ class Factorizer:
                 print(f"{number}={p}*{q}")
         end_time = time.time()
         elapsed_time = end_time - start_time
-        print(f"\nExecution time: {elapsed_time:.6f} seconds")
+        minutes, seconds = divmod(elapsed_time, 60)
+        print(f"\nreal\t{minutes:.0f}m{seconds:.3f}s\nuser\t{minutes:.0f}m{seconds:.3f}s\nsys\t0m0.000s")
 
 if __name__ == '__main__':
     """
